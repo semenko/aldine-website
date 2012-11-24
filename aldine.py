@@ -46,15 +46,15 @@ def page_index():
 
 
 # About Us
-@app.route("/about.html")
-def page_about():
-    return render_template('about.html')
+#@app.route("/about.html")
+#def page_about():
+#    return render_template('about.html')
 
 
 # Search
-@app.route("/search.html")
-def search_results():
-    return render_template('search.html')
+#@app.route("/search.html")
+#def search_results():
+#    return render_template('search.html')
 
 ######
 # *** Odd URLs and support functions
