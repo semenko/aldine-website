@@ -53,7 +53,7 @@ def main():
 
     # Special IAM user: aldine-deploy-bot
     with open('.awskey', 'r') as secret_key:
-        os.environ['AWS_ACCESS_KEY_ID'] = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+        os.environ['AWS_ACCESS_KEY_ID'] = 'AKIAJNLD2X37HGDGTUEQ'
         os.environ['AWS_SECRET_ACCESS_KEY'] = secret_key.readline()
 
     if args.deploy or args.freeze_only:

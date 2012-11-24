@@ -1,5 +1,6 @@
 *.pyc
 *~
 .DS_Store
+.awskey
 .idea
 aldine_frozen/
