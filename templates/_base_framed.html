@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}title{% endblock %} &middot; Aldine Travel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="author" content="Nick Semenkovich (@semenko) http://web.mit.edu/semenko/">
+
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ static('style.css') }}">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+{#
+    <link rel="shortcut icon" href="/s/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/s/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/s/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/s/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="/s/ico/apple-touch-icon-57-precomposed.png">
+#}
+  </head>
+
+  <body>
+
+    <!-- NAVBAR
+    ================================================== -->
+    <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
+    <div class="container navbar-wrapper">
+
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="#">Aldine Travel</a>
+          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="featured-trips.html">Featured Trips</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search for Trips <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="cruises.html">Cruises</a></li>
+                  <li><a href="tours.html">Tours</a></li>
+                  <li><a href="vacation-packages.html">Vacation Packages</a></li>
+                  <li><a href="hotels-and-resorts.html">Hotels &amp; Resorts</a></li>
+                  <li class="divider"></li>
+                  <li class="nav-header">Specials</li>
+                  <li><a href="promotions.html">Promotions</a></li>
+                  <li><a href="featured-trips.html">Featured Trips</a></li>
+		  <li><a href="luxury-villas.html">Luxury Villas</a></li>
+                </ul>
+              </li>
+              <li><a href="travel-resources.html">Travel Resources</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!-- /.navbar-inner -->
+      </div><!-- /.navbar -->
+
+    </div><!-- /.container -->
+
+    <div class="container marketing">
+    <hr class="featurette-divider">
+
+    <div>
+          <iframe src="{% block iframe %}{% endblock %}" frameborder="0" border="0" noresize marginwidth="10" marginheight="0" width="100%" height="800px"></iframe>
+</div>
+      <hr class="featurette-divider">
+        </div>
+
+
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2012 Aldine Travel, Inc.</p>
+        <p>Call: 314-994-7878 &middot; <a href="mailto:info@aldinetravel.com">info@aldinetravel.com</a></p>
+	<p>9909 Clayton Road, St. Louis, MO 63124</p>
+      </footer>
+
+    </div><!-- /.container -->
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+  </body>
+</html>

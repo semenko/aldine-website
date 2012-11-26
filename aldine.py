@@ -46,15 +46,47 @@ def page_index():
 
 
 # About Us
-#@app.route("/about.html")
-#def page_about():
-#    return render_template('about.html')
+@app.route("/about-us.html")
+def page_about():
+    return render_template('about-us.html')
+
+@app.route("/featured-trips.html")
+def page_featured_trips():
+    return render_template('featured-trips.html')
+
+@app.route("/cruises.html")
+def page_cruises():
+    return render_template('cruises.html')
+
+@app.route("/tours.html")
+def page_tours():
+    return render_template('tours.html')
+
+@app.route("/vacation-packages.html")
+def page_vacation_packages():
+    return render_template('vacation-packages.html')
+
+@app.route("/hotels-and-resorts.html")
+def page_hotels_and_resorts():
+    return render_template('hotels-and-resorts.html')
+
+@app.route("/promotions.html")
+def page_promotions():
+    return render_template('promotions.html')
+
+@app.route("/luxury-villas.html")
+def page_luxury_villas():
+    return render_template('luxury-villas.html')
+
+@app.route("/travel-resources.html")
+def page_travel_resources():
+    return render_template('travel-resources.html')
+
+@app.route("/contact-us.html")
+def page_contact_us():
+    return render_template('contact-us.html')
 
 
-# Search
-#@app.route("/search.html")
-#def search_results():
-#    return render_template('search.html')
 
 ######
 # *** Odd URLs and support functions
