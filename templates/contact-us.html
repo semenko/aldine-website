@@ -2,32 +2,42 @@
 {% block title %}About Our Agents{% endblock %}
 {% block description %}A St. Louis luxury travel agency specializing in biking trips, adventure travel, cruises, and inventive land vacations.{% endblock %}
 {% block page_core %}
+<style type="text/css">
+#backgroundimg {
+    background-image: url('{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}');
+    background-size: 100% 500px; background-repeat:no-repeat;
+    z-index: -999; display:inline;
+    position:absolute; width: 100%; height:100%;
+    opacity:0.2; filter:alpha(opacity=20)}
+</style>
+<div id="backgroundimg"></div>
+
 <div class="container" style="margin-top:80px">
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<div id="form" style="height:400px">
-<iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="try{ if(submitted) {$('#form').hide().html('<h3>Thank you</h3><p>Your message has been sent.</p>').show();}}catch(err){}"></iframe>
-<form id="contactform" action="https://spreadsheets.google.com/a/aldinetravel.com/formResponse?formkey=dFdkX1VNbmEzVFpON21wUFV2YlF6ZWc6MQ" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-<ul>
-<li>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <div id="form" style="height:400px">
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="try{ if(submitted) {$('#form').hide().html('<h3>Thank you</h3><p>Your message has been sent.</p>').show();}}catch(err){}"></iframe>
+        <form id="contactform" action="https://spreadsheets.google.com/a/aldinetravel.com/formResponse?formkey=dFdkX1VNbmEzVFpON21wUFV2YlF6ZWc6MQ" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+            <ul>
+                <li>
 
-<label for="name">Your Name</label>
-<input id="name" name="entry.0.single" type="text" required/>
-</li>
-<li>
-<label for="email">Your Email</label>
-<input id="email" name="entry.1.single" type="text" required>
-</li>
-<li>
+                    <label for="name">Your Name</label>
+                    <input id="name" name="entry.0.single" type="text" required/>
+                </li>
+                <li>
+                    <label for="email">Your Email</label>
+                    <input id="email" name="entry.1.single" type="text" required>
+                </li>
+                <li>
 
-<label for="message">Message</label>
-<textarea id="message" name="entry.2.single" rows="3" cols="40" required></textarea>
-</li>
-<li>
-<input type="submit" class="submit" value="Send Now" onclick="$('#form input[type=submit]').attr('value','Sending message...').attr('disabled','disabled');$('#contactform').submit();"/>
-</li>
-</ul>
-</form>
-</div>
+                    <label for="message">Message</label>
+                    <textarea id="message" name="entry.2.single" rows="3" cols="40" required></textarea>
+                </li>
+                <li>
+                    <input type="submit" class="submit" value="Send Now" onclick="$('#form input[type=submit]').attr('value','Sending message...').attr('disabled','disabled');$('#contactform').submit();"/>
+                </li>
+            </ul>
+        </form>
+    </div>
 Welcome to Aldine Travel’s new website, a collaboration between our agents, our suppliers and our clients.  Travel is not only about experiencing destinations but building relationships.  We hope that our website can be your arm chair portal to the world as posts and pictures are added.  We invite you to hop on board and be part of the journey.
 Aldine Travel has been in business in St. Louis since 1958, creating great memories and experiences for our clients.  We believe that travel is a lifetime activity and the planning should reflect this philosophy.
 There are 23 travel advisors in our office, each of them with a passion for what they do and eager to share that passion each other and with their clients.  Many of our agents have area expertise and all of them have an opinion!
