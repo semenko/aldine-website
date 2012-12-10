@@ -53,7 +53,7 @@
           <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="/">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li><a href="about-us.html">About Us</a></li>
               <li><a href="featured-trips.html">Featured Trips</a></li>
 <!--              <li class="dropdown">
@@ -88,7 +88,17 @@
         $(function(){
           $('#myCarousel').carousel()
         })
-      }(window.jQuery)
+      }(window.jQuery);
+      // Auto-tab highlighting.
+      try { var page = location.href.split(/\//)[3].split(/#/)[0]; } catch (err) {}
+      if(page) {
+          if(page.indexOf('.') == -1) {
+              page += '/';
+          }
+      } else {
+          page = 'index.html';
+      }
+      $(".navbar ul.nav").find('a[href$="'+page+'"]').parents("li").addClass("active");
     </script>
   </body>
 </html>
