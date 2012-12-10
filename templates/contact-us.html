@@ -3,61 +3,49 @@
 {% block description %}A St. Louis luxury travel agency specializing in biking trips, adventure travel, cruises, and inventive land vacations.{% endblock %}
 {% block page_core %}
 <style type="text/css">
-#backgroundimg {
-    background-image: url('{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}');
-    background-size: 100% 500px; background-repeat:no-repeat;
-    z-index: -999; display:inline;
-    position:absolute; width: 100%; height:100%;
-    opacity:0.2; filter:alpha(opacity=20)}
+    #backgroundimg {
+        background-image: url('{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}');
+        background-size: 100% 550px; background-repeat:no-repeat;
+        z-index: -999; display:inline;
+        position:absolute; width: 100%; height:100%;
+        opacity:0.2; filter:alpha(opacity=20)}
 </style>
 <div id="backgroundimg"></div>
 
 <div class="container" style="margin-top:80px">
-    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <div id="form" style="height:400px">
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="try{ if(submitted) {$('#form').hide().html('<h3>Thank you</h3><p>Your message has been sent.</p>').show();}}catch(err){}"></iframe>
-        <form id="contactform" action="https://spreadsheets.google.com/a/aldinetravel.com/formResponse?formkey=dFdkX1VNbmEzVFpON21wUFV2YlF6ZWc6MQ" method="post" target="hidden_iframe" onsubmit="submitted=true;">
-            <ul>
-                <li>
+    <div class="span12"><h1>Get in Touch</h1>
+        <p class="lead">Drop by the office if you’re in the area, or feel free to contact us by telephone, e-mail, or fax.</p><br></div>
+    <div class="span4" style="padding-right: 30px">
+        <div id="form" style="height:400px">
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="try{ if(submitted) {$('#form').hide().html('<h3>Thank you</h3><p>Your message has been sent.</p>').show();}}catch(err){}"></iframe>
+            <form id="contactform" action="https://spreadsheets.google.com/a/aldinetravel.com/formResponse?formkey=dFdkX1VNbmEzVFpON21wUFV2YlF6ZWc6MQ" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+                <label for="name">Name</label>
+                <input id="name" name="entry.0.single" type="text" placeholder="Your Name" class="input-xlarge" required/>
 
-                    <label for="name">Your Name</label>
-                    <input id="name" name="entry.0.single" type="text" required/>
-                </li>
-                <li>
-                    <label for="email">Your Email</label>
-                    <input id="email" name="entry.1.single" type="text" required>
-                </li>
-                <li>
+                <label for="email">Email</label>
+                <input id="email" name="entry.1.single" type="text" placeholder="your@email.address" class="input-xlarge" required>
 
-                    <label for="message">Message</label>
-                    <textarea id="message" name="entry.2.single" rows="3" cols="40" required></textarea>
-                </li>
-                <li>
-                    <input type="submit" class="submit" value="Send Now" onclick="$('#form input[type=submit]').attr('value','Sending message...').attr('disabled','disabled');$('#contactform').submit();"/>
-                </li>
-            </ul>
-        </form>
+
+                <label for="message">Message</label>
+                <textarea class="field span4" id="message" name="entry.2.single" rows="5" cols="100" placeholder="Enter a short message." required></textarea>
+                <br>
+                <button class="btn btn-info" name="wat" value="Send Now">Send Now</button>
+            </form>
+        </div>
     </div>
-Welcome to Aldine Travel’s new website, a collaboration between our agents, our suppliers and our clients.  Travel is not only about experiencing destinations but building relationships.  We hope that our website can be your arm chair portal to the world as posts and pictures are added.  We invite you to hop on board and be part of the journey.
-Aldine Travel has been in business in St. Louis since 1958, creating great memories and experiences for our clients.  We believe that travel is a lifetime activity and the planning should reflect this philosophy.
-There are 23 travel advisors in our office, each of them with a passion for what they do and eager to share that passion each other and with their clients.  Many of our agents have area expertise and all of them have an opinion!
-Our agents’ backgrounds have always connected the rigors of travel and all its inconveniences with the beauty and ever-changing world we live in…no longer can we say, that when you arrive in Florence, you will have no trouble getting a room on the Arno…or when you get there the museums won’t be too crowded because it is September and the season is over… No more, every city, every site is on the agenda of every world traveler…but, there are still nuances to travel which can make a trip special when it is designed by our staff utilizing all of the incredible resources of Virtuoso.
-Virtuoso limits their membership to only the best. Fewer than 1% of the travel retailers in North America are accepted for membership in Virtuoso.
-Let us help you script your story!
-
-
-
-
-Drop by the office if you’re in the area, or feel free to contact us by telephone, e-mail, or fax.
-Aldine Travel, Inc.
-9909 Clayton Rd.
-Saint Louis, MO 63124
-Toll-Free: 1-800-762-3385
-Local: (314) 994-7878
-Fax: (314) 994-1374
-Email: info@aldinetravel.com
-
-
-Proudly serving the St. Louis region since 1958.
+    <div class="span3">
+        <address>
+            <strong>Aldine Travel, Inc.</strong><br>
+            9909 Clayton Rd., Suite 100<br>
+            Saint Louis, MO 63124<br><br>
+            <strong>Phone:</strong> (314) 994-787<br>
+            Toll-Free: 1-800-762-3385<br>
+            Fax: (314) 994-1374<br><br>
+            <strong>E-mail</strong>: <a href="mailto:info@aldinetravel.com">info@aldinetravel.com</a>
+        </address>
+        </div><div class="span3">
+        <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Aldine+Travel&amp;aq=&amp;sll=38.6531,-90.243462&amp;sspn=0.444531,0.891266&amp;t=m&amp;ie=UTF8&amp;hq=Aldine+Travel&amp;hnear=&amp;ll=38.639668,-90.396709&amp;spn=0.040225,0.051498&amp;z=13&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Aldine+Travel&amp;aq=&amp;sll=38.6531,-90.243462&amp;sspn=0.444531,0.891266&amp;t=m&amp;ie=UTF8&amp;hq=Aldine+Travel&amp;hnear=&amp;ll=38.639668,-90.396709&amp;spn=0.040225,0.051498&amp;z=13" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+        </div>
+    </div>
 </div>
 {% endblock %}
