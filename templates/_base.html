@@ -7,15 +7,27 @@
     <meta name="description" content="{% block description %}{% endblock %}">
     <meta name="author" content="Nick Semenkovich (@semenko) http://web.mit.edu/semenko/">
 
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ static('style.css') }}">
+    <script type="text/javascript">
+    var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-76188-1']);
+    _gaq.push(['_setSiteSpeedSampleRate', 100]);_gaq.push(['_trackPageview']);
+    window.onerror = function(m, f, l) {
+      var err = [f, l, m].join(' : ');
+      _gaq.push(['_trackEvent', 'Errors', 'App', err, null, true]);
+    };
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = 'https://ssl.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <!-- Fav and touch icons -->
+
 {#
     <link rel="shortcut icon" href="/s/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/s/ico/apple-touch-icon-144-precomposed.png">
@@ -44,7 +56,7 @@
               <li class="active"><a href="/">Home</a></li>
               <li><a href="about-us.html">About Us</a></li>
               <li><a href="featured-trips.html">Featured Trips</a></li>
-              <li class="dropdown">
+<!--              <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search for Trips <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="cruises.html">Cruises</a></li>
@@ -58,7 +70,7 @@
 		  <li><a href="luxury-villas.html">Luxury Villas</a></li>
                 </ul>
               </li>
-              <li><a href="travel-resources.html">Travel Resources</a></li>
+              <li><a href="travel-resources.html">Travel Resources</a></li> //-->
               <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -70,7 +82,7 @@
 {% block page_core %}page_core{% endblock %}
 
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
     <script>
       !function ($) {
         $(function(){
