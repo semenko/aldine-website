@@ -98,23 +98,21 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 's'),
                                'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
-# Return favicon from the root path
+# Return robotos from the root path
 @app.route('/robots.txt')
 def robots():
     return send_from_directory(os.path.join(app.root_path, 's'),
                                'robots.txt', mimetype='text/plain')
 
-# This doesn't really do anything. It renders error.html for Flask.
-# error.html is a special S3 endpoint custom error page.
-@app.route("/error.html")
-def error_handler_for_flask():
-    return render_template('error.html')
+@app.route('/openid')
+def openid():
+    return send_from_directory(os.path.join(app.root_path, 's'),
+                               'openid', mimetype='application/xrds+xml')
 
-# A more generic handler, only for live Flask deployments.
-@app.errorhandler(404)
-def page_not_found(error):
-    """ Return our generic error page. """
-    return render_template('error.html'), 404
+@app.route('/.well-known/host-meta')
+def host_meta():
+    return send_from_directory(os.path.join(app.root_path, 's'),
+                               'host-meta', mimetype='text/plain')
 
 
 if __name__ == "__main__":
