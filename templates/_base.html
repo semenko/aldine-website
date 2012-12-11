@@ -90,21 +90,15 @@
     <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
     <script>
-      !function ($) {
-        $(function(){
-          $('#myCarousel').carousel()
-        })
-      }(window.jQuery);
+      !function ($) { $(function(){ $('#myCarousel').carousel() }) }(window.jQuery);
       // Auto-tab highlighting.
       try { var page = location.href.split(/\//)[3].split(/#/)[0]; } catch (err) {}
-      if(page) {
-          if(page.indexOf('.') == -1) {
-              page += '/';
-          }
-      } else {
-          page = '/';
-      }
+      if(page) { if(page.indexOf('.') == -1) { page += '/'; } } else { page = '/'; }
       $(".navbar ul.nav").find('a[href$="'+page+'"]').parents("li").addClass("active");
+    </script>
+    <script async>
+        var preload_imgs = ['{{ static('img/cs-wiki-1-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-2-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}','{{ static('img/our-agents.jpg') }}'];
+        $(preload_imgs).each(function() { var pimg = $('<img />').attr('src', this);});
     </script>
   </body>
 </html>
