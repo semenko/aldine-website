@@ -28,9 +28,7 @@
     <link rel="apple-touch-icon-precomposed" href="/s/ico/apple-touch-icon-57-precomposed.png">
 #}
   </head>
-
   <body>
-    <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
     <div class="container navbar-wrapper">
       <div class="navbar navbar-inverse">
         <div class="navbar-inner">
@@ -66,9 +64,7 @@
         </div>
       </div>
     </div>
-
 {% block page_core %}page_core{% endblock %}
-
     <div class="container">
       <hr class="featurette-divider">
       <footer>
@@ -82,9 +78,8 @@
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
     <script>
       !function ($) { $(function(){ $('#myCarousel').carousel() }) }(window.jQuery);
-      // Auto-tab highlighting.
-      try { var page = location.href.split(/\//)[3].split(/#/)[0]; } catch (err) {}
-      if(page) { if(page.indexOf('.') == -1) { page += '/'; } } else { page = '/'; }
+      try { var page = location.href.split(/\//)[3].split(/#/)[0]; } catch (err) { var page = '/'; }
+      if(page.indexOf('.') == -1) { page += '/'; }
       $(".navbar ul.nav").find('a[href$="'+page+'"]').parents("li").addClass("active");
     </script>
     <script async>
