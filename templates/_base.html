@@ -43,7 +43,7 @@
               <li><a href="/">Home</a></li>
               <li><a href="/about-us.html">About Us</a></li>
               <li><a href="/featured-trips.html">Featured Trips</a></li>
-<!--              <li class="dropdown">
+              <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search for Trips <b class="caret"></b></a>
                 <ul class="dropdown-menu">
                   <li><a href="cruises.html">Cruises</a></li>
@@ -54,10 +54,10 @@
                   <li class="nav-header">Specials</li>
                   <li><a href="promotions.html">Promotions</a></li>
                   <li><a href="featured-trips.html">Featured Trips</a></li>
-		  <li><a href="luxury-villas.html">Luxury Villas</a></li>
+<!--		  <li><a href="luxury-villas.html">Luxury Villas</a></li> //-->
                 </ul>
               </li>
-              <li><a href="travel-resources.html">Travel Resources</a></li> //-->
+<!--              <li><a href="travel-resources.html">Travel Resources</a></li> //-->
               <li><a href="/contact-us.html">Contact Us</a></li>
             </ul>
           </div>
@@ -83,7 +83,8 @@
       $(".navbar ul.nav").find('a[href$="'+page+'"]').parents("li").addClass("active");
     </script>
     <script async>
-        var preload_imgs = ['{{ static('img/cs-wiki-1-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-2-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}','{{ static('img/our-agents.jpg') }}'];
+        var preload_imgs = ['{{ static('img/cs-wiki-1-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-2-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}','{{ static('img/our-agents.jpg') }}',
+        'http://vcms.virtuoso.com/Images/searchform/cruise.jpg','http://vcms.virtuoso.com/Images/searchform/tour.jpg','http://vcms.virtuoso.com/Images/searchform/package.jpg','http://vcms.virtuoso.com/Images/searchform/property.jpg','http://vcms.virtuoso.com/Images/searchform/promotions.jpg'];
         $(preload_imgs).each(function() { var pimg = $('<img />').attr('src', this);});
     </script>
   </body>

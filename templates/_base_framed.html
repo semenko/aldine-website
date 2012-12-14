@@ -18,10 +18,16 @@
     opacity:0.5; filter:alpha(opacity=20)}
 </style>
 <div id="backgroundimg2"></div>
-<div class="container marketing">
+<div class="container">
     <hr class="featurette-divider">
     <div>
-        <iframe src="{% block iframe %}{% endblock %}" frameborder="0" height="1000" width="100%"></iframe>
+        <div style="position:absolute;padding-top:50px;z-index:-100" id="loading"><h1>Loading <span id="wait"></span></h1></div>
+        <script>
+            var wait = document.getElementById("wait");
+            var dots = window.setInterval( function() { if ( wait.innerHTML.length > 2) wait.innerHTML = ""; else wait.innerHTML += "."; }, 600);
+            function destroyLoading() { clearInterval(dots); document.getElementById('loading').style.display = 'none'; };
+        </script>
+        <iframe src="{% block iframe %}{% endblock %}" frameborder="0" height="1000" width="100%" onload="destroyLoading();"></iframe>
     </div>
 </div>
 {% endblock %}
