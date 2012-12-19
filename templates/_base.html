@@ -8,7 +8,7 @@
     <meta name="author" content="Nick Semenkovich (@semenko) http://web.mit.edu/semenko/">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
-    <link href="{{ static('style.css') }}" rel="stylesheet">
+    {%- if config.FREEZER_DESTINATION is defined -%}<link href="{{ static('style.min.css') }}" rel="stylesheet">{% else %}<link href="{{ static('style.css') }}" rel="stylesheet">{% endif %}
     <script type="text/javascript">
     var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-76188-1']);
     _gaq.push(['_setSiteSpeedSampleRate', 100]); _gaq.push(['_trackPageview']);
@@ -21,13 +21,11 @@
   </script>
   <!--[if lte IE 7]><script src="//ie6-upgrade-warning.googlecode.com/svn/trunk/ie6/warning.js"></script><script>window.onload=function(){e("//ie6-upgrade-warning.googlecode.com/svn/trunk/ie6/")}</script><![endif]-->
   <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><![endif]-->
-{#
-    <link rel="shortcut icon" href="/s/ico/favicon.ico">
+{#  <link rel="shortcut icon" href="/s/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/s/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/s/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/s/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="/s/ico/apple-touch-icon-57-precomposed.png">
-#}
+    <link rel="apple-touch-icon-precomposed" href="/s/ico/apple-touch-icon-57-precomposed.png"> #}
   </head>
   <body>
     <div class="container navbar-wrapper">
@@ -88,9 +86,11 @@
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
     <script>!function ($) { $(function(){ $('#myCarousel').carousel() }) }(window.jQuery);</script>
     <script async>
+      (function(){
         var preload_imgs = ['{{ static('img/cs-wiki-1-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-2-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}','{{ static('img/our-agents.jpg') }}',
-        'http://vcms.virtuoso.com/Images/searchform/cruise.jpg','http://vcms.virtuoso.com/Images/searchform/tour.jpg','http://vcms.virtuoso.com/Images/searchform/package.jpg','http://vcms.virtuoso.com/Images/searchform/property.jpg','http://vcms.virtuoso.com/Images/searchform/promotions.jpg'];
+        '//vcms.virtuoso.com/Images/searchform/cruise.jpg','//vcms.virtuoso.com/Images/searchform/tour.jpg','//vcms.virtuoso.com/Images/searchform/package.jpg','//vcms.virtuoso.com/Images/searchform/property.jpg','//vcms.virtuoso.com/Images/searchform/promotions.jpg'];
         $(preload_imgs).each(function() { var pimg = $('<img />').attr('src', this);});
+      })();
     </script>
   </body>
 </html>
