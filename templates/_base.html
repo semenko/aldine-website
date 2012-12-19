@@ -76,7 +76,6 @@
       </footer>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
     <script>
       (function(){
         var adtext = {'Jet':'Private Jet Tours', 'Butterfield':'Butterfield & Robinson Tours', 'Backroad':'Backroads Active Travel', 'Active':'Hiking and Biking Tours', 'Tauck':'Tauck Adventure Travel', 'MTSobek':'Mountain Travel Sobek','IST':'IST Cultural Tours','Japan':'Japan and Orient Tours','ATS':'ATS Tour Planning','Brendan':'Brendan Tour Planning','Island':'Island Travel Getaways','Travcoa':'Travcoa Tour Planning'};
@@ -85,8 +84,9 @@
       (function() {
         try { var page = location.href.split(/\//)[3].split(/#/)[0]; } catch (err) { var page = '/'; } if(page.indexOf('.') == -1) { page += '/'; }
         $(".navbar ul.nav").find('a[href$="'+page+'"]').first().parents("li").addClass("active"); })();
-      !function ($) { $(function(){ $('#myCarousel').carousel() }) }(window.jQuery);
     </script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
+    <script>!function ($) { $(function(){ $('#myCarousel').carousel() }) }(window.jQuery);</script>
     <script async>
         var preload_imgs = ['{{ static('img/cs-wiki-1-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-2-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}','{{ static('img/our-agents.jpg') }}',
         'http://vcms.virtuoso.com/Images/searchform/cruise.jpg','http://vcms.virtuoso.com/Images/searchform/tour.jpg','http://vcms.virtuoso.com/Images/searchform/package.jpg','http://vcms.virtuoso.com/Images/searchform/property.jpg','http://vcms.virtuoso.com/Images/searchform/promotions.jpg'];
