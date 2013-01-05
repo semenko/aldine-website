@@ -21,10 +21,10 @@
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="try{ if(submitted) {_gaq.push(['_trackEvent','Form','formSent']);$('#form').hide().html('<h3>Thank you</h3><p>Your message has been sent.</p>').show();}}catch(err){}"></iframe>
             <form id="contactform" action="https://spreadsheets.google.com/a/aldinetravel.com/formResponse?formkey=dFdkX1VNbmEzVFpON21wUFV2YlF6ZWc6MQ" method="post" target="hidden_iframe" onsubmit="submitted=true;">
                 <label for="name">Name</label>
-                <input id="name" name="entry.0.single" type="text" placeholder="Your Name" class="input-xlarge" required/>
+                <input id="name" name="entry.0.single" type="text" placeholder="Your Name" class="input-xlarge" autocomplete="name" required>
 
                 <label for="email">Email</label>
-                <input id="email" name="entry.1.single" type="text" placeholder="your@email.address" class="input-xlarge" required>
+                <input id="email" name="entry.1.single" type="text" placeholder="your@email.address" class="input-xlarge" autocomplete="email" required>
 
                 <label for="message">Message</label>
                 <textarea class="field span4" id="message" name="entry.3.single" rows="5" cols="100" placeholder="Enter a short message." required></textarea>
@@ -44,7 +44,7 @@
             <strong>E-mail</strong>: <a href="mailto:info@aldinetravel.com" target="_blank" onmousedown="_gaq.push(['_trackEvent','Email','ContactUs']);">info@aldinetravel.com</a>
         </address>
         </div><div class="span4">
-        <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Aldine+Travel&amp;aq=&amp;sll=38.6531,-90.243462&amp;sspn=0.444531,0.891266&amp;t=m&amp;ie=UTF8&amp;hq=Aldine+Travel&amp;hnear=&amp;ll=38.639668,-90.396709&amp;spn=0.040225,0.051498&amp;z=13&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Aldine+Travel&amp;aq=&amp;sll=38.6531,-90.243462&amp;sspn=0.444531,0.891266&amp;t=m&amp;ie=UTF8&amp;hq=Aldine+Travel&amp;hnear=&amp;ll=38.639668,-90.396709&amp;spn=0.040225,0.051498&amp;z=13" style="color:#0000FF;text-align:left" target="_blank" onmousedown="_gaq.push(['_trackEvent','MapClick','ContactUs']);">View Larger Map</a></small>
+        <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="//maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Aldine+Travel&amp;aq=&amp;sll=38.6531,-90.243462&amp;sspn=0.444531,0.891266&amp;t=m&amp;ie=UTF8&amp;hq=Aldine+Travel&amp;hnear=&amp;ll=38.639668,-90.396709&amp;spn=0.040225,0.051498&amp;z=13&amp;output=embed"></iframe><br><small><a href="//maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Aldine+Travel&amp;aq=&amp;sll=38.6531,-90.243462&amp;sspn=0.444531,0.891266&amp;t=m&amp;ie=UTF8&amp;hq=Aldine+Travel&amp;hnear=&amp;ll=38.639668,-90.396709&amp;spn=0.040225,0.051498&amp;z=13" style="color:#0000FF;text-align:left" target="_blank" onmousedown="_gaq.push(['_trackEvent','MapClick','ContactUs']);">View Larger Map</a></small>
         </div>
     </div>
 </div></div>
@@ -59,11 +59,11 @@ var google_conversion_label = "qUY1CMmhkwEQh4OL_gM";
 var google_conversion_value = 0;
 /* ]]> */
 </script>
-<script async type="text/javascript" src="http://www.googleadservices.com/pagead/conversion.js">
+<script async type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
 <div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" src="http://www.googleadservices.com/pagead/conversion/1069728135/?value=0&amp;label=qUY1CMmhkwEQh4OL_gM&amp;guid=ON&amp;script=0"/>
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/1069728135/?value=0&amp;label=qUY1CMmhkwEQh4OL_gM&amp;guid=ON&amp;script=0">
 </div>
 </noscript>
 {% endblock %}
