@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>{% block title %}A St. Louis Luxury Travel Agency{% endblock %} &middot; Aldine Travel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,23 +11,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
     {%- if config.FREEZER_DESTINATION is defined -%}<link href="{{ static('style.min.css') }}" rel="stylesheet">{% else %}<link href="{{ static('style.css') }}" rel="stylesheet">{% endif %}
-    <script type="text/javascript">
-    var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-76188-1']);
-    _gaq.push(['_setSiteSpeedSampleRate', 100]); _gaq.push(['_trackPageview']);
-    window.onerror = function(m, f, l) { var err = [f, l, m].join(' : '); _gaq.push(['_trackEvent', 'Errors', 'App', err, null, true]); };
-    (function() {
-      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-    })();
-   </script>
-  <!--[if lt IE 8]><script src="//ie6-upgrade-warning.googlecode.com/svn/trunk/ie6/warning.js"></script><script>window.onload=function(){e("//ie6-upgrade-warning.googlecode.com/svn/trunk/ie6/")}</script><![endif]-->
-  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><![endif]-->
-{#  <link rel="shortcut icon" href="/s/ico/favicon.ico">
+    <!--[if lt IE 8]><script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script><script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})});</script><![endif]-->
+    <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><![endif]-->
+    {#  <link rel="shortcut icon" href="/s/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/s/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/s/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/s/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/s/ico/apple-touch-icon-57-precomposed.png"> #}
+    <script>
+        var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-76188-1']);
+        _gaq.push(['_setSiteSpeedSampleRate', 100]); _gaq.push(['_trackPageview']);
+        window.onerror = function(m, f, l) { var err = [f, l, m].join(' : '); _gaq.push(['_trackEvent', 'Errors', 'App', err, null, true]); };
+        (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
   </head>
   <body>
     <div class="container navbar-wrapper">
