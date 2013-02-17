@@ -3,4 +3,6 @@
 .DS_Store
 .awskey
 .idea
-aldine_frozen/
+app_frozen/
+freezepop.py
+.bin
