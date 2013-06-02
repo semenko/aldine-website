@@ -1,12 +1,7 @@
-[aws_key]
+[general]
 aws_key_id = AKIAJNLD2X37HGDGTUEQ
-
-[prod_site]
-s3_bucket = prod.aldinetravel.com
-cloudfront_endpoint = endpoint.cloudfront.net
-
-[staging_site]
-s3_bucket = staging.aldinetravel.com
+prod_s3_bucket = prod.aldinetravel.com
+staging_s3_bucket = prod.aldinetravel.com
 
 [cache_settings]
 png = 2628000
