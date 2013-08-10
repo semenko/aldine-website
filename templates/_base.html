@@ -6,13 +6,13 @@
     <title>{% block title %}A St. Louis Luxury Travel Agency{% endblock %} &middot; Aldine Travel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{% block description %}St. Louis luxury travel agents specializing in biking trips, adventure travel, cruises, and inventive land vacations. Family-owned since 1958.{% endblock %}">
-    <meta name="author" content="Nick Semenkovich (@semenko) http://web.mit.edu/semenko/">
+    <meta name="author" content="Nick Semenkovich (@semenko) http://nick.semenkovich.com/">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.0/css/bootstrap-combined.min.css" rel="stylesheet">
     {%- if config.FREEZER_DESTINATION is defined -%}<link href="{{ static('style.min.css') }}" rel="stylesheet">{% else %}<link href="{{ static('style.css') }}" rel="stylesheet">{% endif %}
     <!--[if lt IE 8]><script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script><script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})});</script><![endif]-->
-    <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script><![endif]-->
     {#  <link rel="shortcut icon" href="/s/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/s/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/s/ico/apple-touch-icon-114-precomposed.png">
@@ -58,7 +58,7 @@
 <!--		  <li><a href="luxury-villas.html">Luxury Villas</a></li> //-->
                 </ul>
               </li>
-<!--              <li><a href="travel-resources.html">Travel Resources</a></li> //-->
+              <li><a href="/travel-resources.html">Travel Resources</a></li>
               <li><a href="/contact-us.html">Contact Us</a></li>
             </ul>
           </div>
