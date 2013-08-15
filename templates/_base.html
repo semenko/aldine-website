@@ -91,10 +91,10 @@
     <script>!function ($) { $(function(){ $('#myCarousel').carousel() }) }(window.jQuery);</script>
     <script async>
       $(window).load(function(){
-        var preload_imgs = ['{{ static('img/cs-wiki-1-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-2-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}','{{ static('img/our-agents.jpg') }}',
-        '//vcms.virtuoso.com/Images/searchform/cruise.jpg','//vcms.virtuoso.com/Images/searchform/tour.jpg','//vcms.virtuoso.com/Images/searchform/package.jpg','//vcms.virtuoso.com/Images/searchform/property.jpg','//vcms.virtuoso.com/Images/searchform/promotions.jpg'];
+        var preload_imgs = ['{{ static('img/cs-wiki-1-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-2-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}','{{ static('img/our-agents.jpg') }}'];
         $(preload_imgs).each(function() { var pimg = $('<img />').attr('src', this);});
       });
     </script>
+    <link rel="dns-prefetch" href="//vcms.virtuoso.com">
   </body>
 </html>
