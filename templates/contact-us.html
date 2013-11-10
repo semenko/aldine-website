@@ -18,7 +18,7 @@
         <p class="lead">Drop by the office or give us a call &mdash; be sure to ask about our current cruise specials!</p><br></div>
     <div class="span5">
         <div id="form" style="height:400px">
-            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="try{ if(submitted) {_gaq.push(['_trackEvent','Form','formSent']);$('#form').hide().html('<h3>Thank you</h3><p>Your message has been sent.</p>').show();}}catch(err){}"></iframe>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="try{ if(submitted) {ga('send', 'event', 'Form','formSent');$('#form').hide().html('<h3>Thank you</h3><p>Your message has been sent.</p>').show();}}catch(err){}"></iframe>
             <form id="contactform" action="https://spreadsheets.google.com/a/aldinetravel.com/formResponse?formkey=dFdkX1VNbmEzVFpON21wUFV2YlF6ZWc6MQ" method="post" target="hidden_iframe" onsubmit="submitted=true;">
                 <label for="name">Name</label>
                 <input id="name" name="entry.0.single" type="text" placeholder="Your Name" class="input-xlarge" autocomplete="name" required>
@@ -38,13 +38,13 @@
             <strong>Aldine Travel, Inc.</strong><br>
             9909 Clayton Rd., Suite 100<br>
             Saint Louis, MO 63124<br><br>
-            <strong>Phone:</strong> <a href="tel:+1-314-994-7878" onmousedown="_gaq.push(['_trackEvent','Call','local','ContactUs']);">(314) 994-7878</a><br><br>
-            Toll-Free: <a href="tel:+1-800-762-3385" onmousedown="_gaq.push(['_trackEvent','Call','tollfree','ContactUs']);">1-800-762-3385</a><br>
+            <strong>Phone:</strong> <a href="tel:+1-314-994-7878" onmousedown="ga('send','event','Call','local','ContactUs');">(314) 994-7878</a><br><br>
+            Toll-Free: <a href="tel:+1-800-762-3385" onmousedown="ga('send','event','Call','tollfree','ContactUs');">1-800-762-3385</a><br>
             Fax: (314) 994-1374<br><br>
-            <strong>E-mail</strong>: <a href="mailto:info@aldinetravel.com" target="_blank" onmousedown="_gaq.push(['_trackEvent','Email','ContactUs']);">info@aldinetravel.com</a>
+            <strong>E-mail</strong>: <a href="mailto:info@aldinetravel.com" target="_blank" onmousedown="ga('send', 'event', 'Email','ContactUs');">info@aldinetravel.com</a>
         </address>
         </div><div class="span4">
-        <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="//maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Aldine+Travel&amp;aq=&amp;sll=38.6531,-90.243462&amp;sspn=0.444531,0.891266&amp;t=m&amp;ie=UTF8&amp;hq=Aldine+Travel&amp;hnear=&amp;ll=38.639668,-90.396709&amp;spn=0.040225,0.051498&amp;z=13&amp;output=embed"></iframe><br><small><a href="//maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Aldine+Travel&amp;aq=&amp;sll=38.6531,-90.243462&amp;sspn=0.444531,0.891266&amp;t=m&amp;ie=UTF8&amp;hq=Aldine+Travel&amp;hnear=&amp;ll=38.639668,-90.396709&amp;spn=0.040225,0.051498&amp;z=13" style="color:#0000FF;text-align:left" target="_blank" onmousedown="_gaq.push(['_trackEvent','MapClick','ContactUs']);">View Larger Map</a></small>
+        <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="//maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Aldine+Travel&amp;aq=&amp;sll=38.6531,-90.243462&amp;sspn=0.444531,0.891266&amp;t=m&amp;ie=UTF8&amp;hq=Aldine+Travel&amp;hnear=&amp;ll=38.639668,-90.396709&amp;spn=0.040225,0.051498&amp;z=13&amp;output=embed"></iframe><br><small><a href="//maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Aldine+Travel&amp;aq=&amp;sll=38.6531,-90.243462&amp;sspn=0.444531,0.891266&amp;t=m&amp;ie=UTF8&amp;hq=Aldine+Travel&amp;hnear=&amp;ll=38.639668,-90.396709&amp;spn=0.040225,0.051498&amp;z=13" style="color:#0000FF;text-align:left" target="_blank" onmousedown="ga('send','event','MapClick','ContactUs');">View Larger Map</a></small>
         </div>
     </div>
 </div></div>

@@ -9,9 +9,9 @@
     <meta name="author" content="Nick Semenkovich (@semenko) http://nick.semenkovich.com/">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
-    {%- if config.FREEZER_DESTINATION is defined -%}<link href="{{ static('style.min.css') }}" rel="stylesheet">{% else %}<link href="{{ static('style.css') }}" rel="stylesheet">{% endif %}
-    <!--[if lt IE 8]><script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script><script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})});</script><![endif]-->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="{{ static('style.css') }}" rel="stylesheet">
+    <!--[if lt IE 8]><script src="//ie6-upgrade-warning.googlecode.com/svn/trunk/ie6/warning.js"></script><script>window.onload=function(){e("//ie6-upgrade-warning.googlecode.com/svn/trunk/ie6/")}</script><![endif]-->
     <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script><![endif]-->
     {#  <link rel="shortcut icon" href="/s/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/s/ico/apple-touch-icon-144-precomposed.png">
@@ -19,14 +19,13 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/s/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/s/ico/apple-touch-icon-57-precomposed.png"> #}
     <script>
-        var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-76188-1']);
-        _gaq.push(['_setSiteSpeedSampleRate', 100]); _gaq.push(['_trackPageview']);
-        window.onerror = function(m, f, l) { var err = [f, l, m].join(' : '); _gaq.push(['_trackEvent', 'Errors', 'App', err, null, true]); };
-        (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        })();
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-76188-1', {'siteSpeedSampleRate': 100});
+        ga('send', 'pageview');
+        window.onerror = function(m, u, l) { ga('send', 'event', 'JSError', m, u + ':' + l, null, {'nonInteraction': 1}); };
     </script>
   </head>
   <body>
@@ -71,12 +70,12 @@
       <footer>
 	<p class="pull-right"><a href="#">Back to top</a> </p>
 	<p>&copy; 2013 Aldine Travel, Inc. &mdash; A Luxury Travel Agency | Travel agents proudly St. Louis since 1958</p>
-	<p>Phone: <a href="tel:+1-314-994-7878" onmousedown="_gaq.push(['_trackEvent','Call','local','Footer']);">(314) 994-7878</a> &middot; <a href="mailto:info@aldinetravel.com" target="_blank" onmousedown="_gaq.push(['_trackEvent','Email','Footer']);">info@aldinetravel.com</a></p>
+	<p>Phone: <a href="tel:+1-314-994-7878" onmousedown="ga('send', 'event', 'Call','local','Footer');">(314) 994-7878</a> &middot; <a href="mailto:info@aldinetravel.com" target="_blank" onmousedown="ga('send', 'event', 'Email','Footer');">info@aldinetravel.com</a></p>
 	<p>9909 Clayton Road, St. Louis, MO 63124</p>
       </footer>
     </div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || (function(){ document.write('<script src="{{ static('js/jquery-1.10.2.min.js') }}">\x3C/script>'); _gaq.push(['_trackEvent', 'Errors', 'jQueryLoad']); })();</script>
+    <script>window.jQuery || (function(){ document.write('<script src="{{ static('js/jquery-1.10.2.min.js') }}">\x3C/script>'); ga('send', 'event', 'Errors', 'jQueryLoad'); })();</script>
     <script>
       (function(){
         var adtext = {'Jet':'Private Jet Tours', 'Butterfield':'Butterfield & Robinson Tours', 'Backroad':'Backroads Active Travel', 'Active':'Hiking and Biking Tours', 'Tauck':'Tauck Adventure Travel', 'MTSobek':'Mountain Travel Sobek','IST':'IST Cultural Tours','Japan':'Japan and Orient Tours','ATS':'ATS Tour Planning','Brendan':'Brendan Tour Planning','Island':'Island Travel Getaways','Travcoa':'Travcoa Tour Planning','Honeymoon':'Honeymoon Planning'};
@@ -87,7 +86,7 @@
         $(".navbar ul.nav").find('a[href$="'+page+'"]').first().parents("li").addClass("active"); })();
     </script>
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-    <script>$('body').popover || (function(){ document.write('<script src="{{ static('js/bootstrap-2.3.2.min.js') }}">\x3C/script>'); _gaq.push(['_trackEvent', 'Errors', 'BootstrapLoad']); })();</script>
+    <script>$('body').popover || (function(){ document.write('<script src="{{ static('js/bootstrap-2.3.2.min.js') }}">\x3C/script>'); ga('send', 'event', 'Errors', 'BootstrapLoad'); })();</script>
     <script>!function ($) { $(function(){ $('#myCarousel').carousel() }) }(window.jQuery);</script>
     <script async>
       $(window).load(function(){
