@@ -42,49 +42,49 @@ def redirect_index():
 
 @app.route("/")
 def page_index():
-    return render_template('index.html')
+    return render_template('pages/index.html')
 
 
 # About Us
 @app.route("/about-us.html")
 def page_about():
-    return render_template('about-us.html')
+    return render_template('pages/about-us.html')
 
 @app.route("/featured-trips.html")
 def page_featured_trips():
-    return render_template('featured-trips.html')
+    return render_template('pages/featured-trips.html')
 
 @app.route("/cruises.html")
 def page_cruises():
-    return render_template('cruises.html')
+    return render_template('pages/cruises.html')
 
 @app.route("/tours.html")
 def page_tours():
-    return render_template('tours.html')
+    return render_template('pages/tours.html')
 
 @app.route("/vacation-packages.html")
 def page_vacation_packages():
-    return render_template('vacation-packages.html')
+    return render_template('pages/vacation-packages.html')
 
 @app.route("/hotels-and-resorts.html")
 def page_hotels_and_resorts():
-    return render_template('hotels-and-resorts.html')
+    return render_template('pages/hotels-and-resorts.html')
 
 @app.route("/promotions.html")
 def page_promotions():
-    return render_template('promotions.html')
+    return render_template('pages/promotions.html')
 
 @app.route("/luxury-villas.html")
 def page_luxury_villas():
-    return render_template('luxury-villas.html')
+    return render_template('pages/luxury-villas.html')
 
 @app.route("/travel-resources.html")
 def page_travel_resources():
-    return render_template('travel-resources.html')
+    return render_template('pages/travel-resources.html')
 
 @app.route("/contact-us.html")
 def page_contact_us():
-    return render_template('contact-us.html')
+    return render_template('pages/contact-us.html')
 
 
 
