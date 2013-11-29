@@ -9,15 +9,10 @@
     <meta name="author" content="Nick Semenkovich (@semenko) http://nick.semenkovich.com/">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{ static('style.css') }}" rel="stylesheet">
     <!--[if lt IE 8]><script src="//ie6-upgrade-warning.googlecode.com/svn/trunk/ie6/warning.js"></script><script>window.onload=function(){e("//ie6-upgrade-warning.googlecode.com/svn/trunk/ie6/")}</script><![endif]-->
     <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script><![endif]-->
-    {#  <link rel="shortcut icon" href="/s/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/s/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/s/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/s/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="/s/ico/apple-touch-icon-57-precomposed.png"> #}
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -30,41 +25,48 @@
     </script>
   </head>
   <body>
-    <div class="container navbar-wrapper">
-      <div class="navbar navbar-inverse">
-        <div class="navbar-inner">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="/">Aldine Travel</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about-us.html">About Us</a></li>
-              <li><a href="/featured-trips.html">Featured Trips &amp; Cruises</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search for Trips <b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="cruises.html">Cruises</a></li>
-                  <li><a href="tours.html">Tours</a></li>
-                  <li><a href="vacation-packages.html">Vacation Packages</a></li>
-                  <li><a href="hotels-and-resorts.html">Hotels &amp; Resorts</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">Specials</li>
-                  <li><a href="promotions.html">Promotions</a></li>
-                  <li><a href="featured-trips.html">Featured Trips</a></li>
-<!--		  <li><a href="luxury-villas.html">Luxury Villas</a></li> //-->
-                </ul>
-              </li>
-              <li><a href="/travel-resources.html">Travel Resources</a></li>
-              <li><a href="/contact-us.html">Contact Us</a></li>
-            </ul>
+
+  <div class="navbar-wrapper">
+      <div class="container">
+          <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+              <div class="container">
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                          <span class="sr-only">Toggle navigation</span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="#">Aldine Travel</a>
+                  </div>
+                  <div class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav">
+                          <li><a href="/">Home</a></li>
+                          <li><a href="/about-us.html">About Us</a></li>
+                          <li><a href="/featured-trips.html">Featured Trips &amp; Cruises</a></li>
+                          <li class="dropdown">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search for Trips <b class="caret"></b></a>
+                              <ul class="dropdown-menu">
+                                  <li><a href="cruises.html">Cruises</a></li>
+                                  <li><a href="tours.html">Tours</a></li>
+                                  <li><a href="vacation-packages.html">Vacation Packages</a></li>
+                                  <li><a href="hotels-and-resorts.html">Hotels &amp; Resorts</a></li>
+                                  <li class="divider"></li>
+                                  <li class="dropdown-header">Specials</li>
+                                  <li><a href="promotions.html">Promotions</a></li>
+                                  <li><a href="featured-trips.html">Featured Trips</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="/travel-resources.html">Travel Resources</a></li>
+                          <li><a href="/contact-us.html">Contact Us</a></li>
+                      </ul>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
-    </div>
+  </div>
+
+
 {% block page_core %}page_core{% endblock %}
     <div class="container">
       <hr class="featurette-divider">
@@ -86,8 +88,8 @@
         try { var page = location.href.split(/\//)[3].split(/#/)[0]; } catch (err) { var page = '/'; } if(page.indexOf('.') == -1) { page += '/'; }
         $(".navbar ul.nav").find('a[href$="'+page+'"]').first().parents("li").addClass("active"); })();
     </script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-    <script>$('body').popover || (function(){ document.write('<script src="{{ static('js/bootstrap-2.3.2.min.js') }}">\x3C/script>'); ga('send', 'event', 'Errors', 'BootstrapLoad'); })();</script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script>$('body').popover || (function(){ document.write('<script src="{{ static('js/bootstrap-3.0.2.min.js') }}">\x3C/script>'); ga('send', 'event', 'Errors', 'BootstrapLoad'); })();</script>
     <script>!function ($) { $(function(){ $('#myCarousel').carousel() }) }(window.jQuery);</script>
     <script async>
       $(window).load(function(){
