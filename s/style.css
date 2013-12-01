@@ -8,8 +8,12 @@ body {
   color: #181818;
 }
 
+body > .container {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
 hr {
-    border-top: 1px solid #aaa;
+    border-top: 1px solid #999;
 }
 
 footer {
