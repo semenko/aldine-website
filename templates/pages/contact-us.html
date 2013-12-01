@@ -4,32 +4,34 @@
 {% block page_core %}
 <style>
     #backgroundimg {
-        background-image: url('{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}');
-        background-size: 100% 550px; background-repeat:no-repeat;
-        z-index: -999; display:inline;
+        background-image: url('{{ static('img/cs-wiki-1-CC-BY-SA.jpg') }}');
+        z-index: -999;
         position:absolute; width: 100%; height:100%;
-        opacity:0.2; filter:alpha(opacity=20)}
+        opacity:0.60; filter:alpha(opacity=60);
+        background-size: cover;
+        background-position: center center;
+    }
 </style>
 <div id="backgroundimg"></div>
 
-<div class="container" style="padding-top:70px">
+<div class="container" style="padding-top:70px;background-color: rgba(255, 255, 255, 0.6);">
     <div class="row">
         <div class="col-md-12"><h1>Get in Touch</h1>
             <p class="lead">Drop by the office or give us a call &mdash; be sure to ask about our current cruise specials!</p><br></div>
         <div class="col-md-5">
 
-            <div id="form" style="height:400px">
+            <div id="form" style="height:400px" class="form-group">
                 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="try{ if(submitted) {ga('send', 'event', 'Form','formSent');$('#form').hide().html('<h3>Thank you</h3><p>Your message has been sent.</p>').show();}}catch(err){}"></iframe>
                 <form id="contactform" action="https://spreadsheets.google.com/a/aldinetravel.com/formResponse?formkey=dFdkX1VNbmEzVFpON21wUFV2YlF6ZWc6MQ" method="post" target="hidden_iframe" onsubmit="submitted=true;">
                     <label for="name">Name</label>
-                    <input id="name" name="entry.0.single" type="text" placeholder="Your Name" class="input-xlarge" autocomplete="name" required><br>
+                    <input id="name" name="entry.0.single" type="text" placeholder="Your Name" class="form-control" autocomplete="name" required><br>
 
                     <label for="email">Email</label>
-                    <input id="email" name="entry.1.single" type="text" placeholder="your@email.address" class="input-xlarge" autocomplete="email" required><br><br>
+                    <input id="email" name="entry.1.single" type="text" placeholder="your@email.address" class="form-control" autocomplete="email" required><br><br>
 
                     <label for="message">Message</label><br>
-                    <textarea class="field col-md-8" id="message" name="entry.3.single" rows="5" cols="100" placeholder="Enter a short message." required></textarea>
-                    <br><br><br><br><br><br>
+                    <textarea class="form-control" id="message" name="entry.3.single" rows="5" placeholder="Enter a short message." required></textarea>
+                    <br>
                     <button type="submit" class="btn btn-info" value="Send Now">Send Now</button>
                 </form>
             </div>
