@@ -74,10 +74,6 @@ def page_hotels_and_resorts():
 def page_promotions():
     return render_template('pages/promotions.html')
 
-@app.route("/luxury-villas.html")
-def page_luxury_villas():
-    return render_template('pages/luxury-villas.html')
-
 @app.route("/travel-resources.html")
 def page_travel_resources():
     return render_template('pages/travel-resources.html')
