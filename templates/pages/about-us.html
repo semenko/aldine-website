@@ -2,31 +2,35 @@
 {% block title %}About Our Agents{% endblock %}
 {% block description %}Our travel agents have years of experience planning inventive and hassle-free trips.{% endblock %}
 {% block page_core %}
-<style>
+        <style>
     #backgroundimg {
-        background-image: url('{{ static('img/cs-wiki-1-CC-BY-SA.jpg') }}');
+        background-image: url('{{ static('img/cs-wiki-2-CC-BY-SA.jpg') }}');
         background-size: 100% 550px; background-repeat:no-repeat;
         z-index: -999; display:inline;
         position:absolute; width: 100%; height:100%;
-        opacity:0.2; filter:alpha(opacity=20)}
+        opacity:0.60; filter:alpha(opacity=60)
+            background-size: 100%;
+background-size: cover;
+background-position: center center;
+vertical-align: top; }
 </style>
 <div id="backgroundimg"></div>
-<div class="container" style="padding-top:70px">
+<div class="container" style="padding-top:70px;background-color: rgba(255, 255, 255, 0.6);">
     <div class="row">
-        <div class="col-md-12"><h1>Welcome to Aldine Travel</h1><br></div>
-        </div>
-    <div class="row">
-        <div class="col-md-12">
-            <img src="{{ static('img/our-agents.jpg') }}" class="img-polaroid" style="float:right;margin-left:10px">
-            <p class="lead">Aldine Travel is a family-owned luxury travel agency and has been in business in St. Louis since 1958,
+        <div class="col-md-5"><h1>Welcome to Aldine Travel</h1>
+            <p class="lead">Specialists in the art of luxury travel</p><br>
+            <p>Aldine Travel is a family-owned luxury travel agency and has been in business in St. Louis since 1958,
                 creating great memories and experiences for our clients.
                 We believe that travel is a lifetime activity and the planning should reflect this philosophy.</p>
-            <p class="lead">
+            <p>
                 There are 23 travel advisors in our office, each of them with a passion for what they do. Our agents' backgrounds
                 give them incredible knowledge about the intricacies of travel, and make them deeply familiar with many of the world's lesser-known destinations.
-            </p>
-            <p class="lead"><a href="contact-us.html">Contact us</a> today, and let us help you script your story!</p>
+            </p><br>
+            <p class="lead"><a href="contact-us.html">Contact us</a> today, and let us help you script your next luxury travel journey!</p>
         </div>
+        <div class="col-md-7" style="padding-top: 50px">
+                    <p><img src="{{ static('img/our-agents.jpg') }}" class="img-thumbnail img-responsive"></p>
+            </div>
     </div>
 </div>
 {% endblock %}

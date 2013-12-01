@@ -25,81 +25,81 @@
         ga('send', 'pageview');
         window.onerror = function(m, u, l) { ga('send', 'event', 'JSError', m, u + ':' + l, null, {'nonInteraction': 1}); };
     </script>
-  </head>
-  <body>
+</head>
+<body>
 
-  <div class="navbar-wrapper">
-      <div class="container">
-          <div class="navbar navbar-inverse navbar-static-top" role="navigation">
-              <div class="container">
-                  <div class="navbar-header">
-                      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                          <span class="sr-only">Toggle navigation</span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="/">Aldine Travel</a>
-                  </div>
-                  <div class="navbar-collapse collapse">
-                      <ul class="nav navbar-nav">
-                          <li><a href="/">Home</a></li>
-                          <li><a href="/about-us.html">About Us</a></li>
-                          <li><a href="/featured-trips.html">Featured Trips &amp; Cruises</a></li>
-                          <li class="dropdown">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search for Trips <b class="caret"></b></a>
-                              <ul class="dropdown-menu">
-                                  <li><a href="cruises.html">Cruises</a></li>
-                                  <li><a href="tours.html">Tours</a></li>
-                                  <li><a href="vacation-packages.html">Vacation Packages</a></li>
-                                  <li><a href="hotels-and-resorts.html">Hotels &amp; Resorts</a></li>
-                                  <li class="divider"></li>
-                                  <li class="dropdown-header">Specials</li>
-                                  <li><a href="promotions.html">Promotions</a></li>
-                                  <li><a href="featured-trips.html">Featured Trips</a></li>
-                              </ul>
-                          </li>
-                          <li><a href="/travel-resources.html">Travel Resources</a></li>
-                          <li><a href="/contact-us.html">Contact Us</a></li>
-                      </ul>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+<div class="navbar-wrapper">
+    <div class="container">
+        <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Aldine Travel</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about-us.html">About Us</a></li>
+                        <li><a href="/featured-trips.html">Featured Getaways</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search for Trips <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="cruises.html">Cruises</a></li>
+                                <li><a href="tours.html">Tours</a></li>
+                                <li><a href="vacation-packages.html">Vacation Packages</a></li>
+                                <li><a href="hotels-and-resorts.html">Hotels &amp; Resorts</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Specials</li>
+                                <li><a href="promotions.html">Promotions</a></li>
+                                <li><a href="featured-trips.html">Featured Trips</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="/travel-resources.html">Helpful Links</a></li>
+                        <li><a href="/contact-us.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 {% block page_core %}page_core{% endblock %}
-    <div class="container">
-      <hr class="featurette-divider">
-      <footer>
-	<p class="pull-right"><a href="#">Back to top</a> </p>
-	<p>&copy; 2013 Aldine Travel, Inc. &mdash; A Luxury Travel Agency | St. Louis' best travel agents since 1958!</p>
-	<p>Phone: <a href="tel:+1-314-994-7878" onmousedown="ga('send', 'event', 'Call','local','Footer');">(314) 994-7878</a> &middot; <a href="mailto:info@aldinetravel.com" target="_blank" onmousedown="ga('send', 'event', 'Email','Footer');">info@aldinetravel.com</a></p>
-	<p>9909 Clayton Road, St. Louis, MO 63124</p>
-      </footer>
-    </div>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || (function(){ document.write('<script src="{{ static('js/jquery-1.10.2.min.js') }}">\x3C/script>'); ga('send', 'event', 'Errors', 'jQueryLoad'); })();</script>
-    <script>
-      (function(){
+<div class="container" style="background-color: rgba(255, 255, 255, 0.6);">
+    <hr class="featurette-divider">
+    <footer>
+        <p class="pull-right"><i>"St. Louis' best travel agents since 1958!"</i></p>
+        <p>&copy; 2013 Aldine Travel, Inc. &mdash; A Luxury Travel Agency</p>
+        <p>Phone: <a href="tel:+1-314-994-7878" onmousedown="ga('send', 'event', 'Call','local','Footer');">(314) 994-7878</a> &middot; <a href="mailto:info@aldinetravel.com" target="_blank" onmousedown="ga('send', 'event', 'Email','Footer');">info@aldinetravel.com</a></p>
+        <p>9909 Clayton Road, Ladue, MO 63124</p>
+    </footer>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || (function(){ document.write('<script src="{{ static('js/jquery-1.10.2.min.js') }}">\x3C/script>'); ga('send', 'event', 'Errors', 'jQueryLoad'); })();</script>
+<script>
+    (function(){
         var adtext = {'Jet':'Private Jet Tours', 'Butterfield':'Butterfield & Robinson Tours', 'Backroad':'Backroads Active Travel', 'Active':'Hiking and Biking Tours', 'Tauck':'Tauck Adventure Travel', 'MTSobek':'Mountain Travel Sobek','IST':'IST Cultural Tours','Japan':'Japan and Orient Tours','ATS':'ATS Tour Planning','Brendan':'Brendan Tour Planning','Island':'Island Travel Getaways','Travcoa':'Travcoa Tour Planning','Honeymoon':'Honeymoon Planning'};
         try { var anchor = location.hash.split(/\//)[1]; } catch (err) { var anchor = ""; }
         if (adtext.hasOwnProperty(anchor)) { $('.carousel-caption h1').first().text( adtext[anchor] ); $('#adtext h1').text("Experts at " + adtext[anchor]); $('#adtext').show(); } } )();
-      (function() {
+    (function() {
         try { var page = location.href.split(/\//)[3].split(/#/)[0]; } catch (err) { var page = '/'; } if(page.indexOf('.') == -1) { page += '/'; }
         $(".navbar ul.nav").find('a[href$="'+page+'"]').first().parents("li").addClass("active"); })();
-    </script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-    <script>$('body').popover || (function(){ document.write('<script src="{{ static('js/bootstrap-3.0.2.min.js') }}">\x3C/script>'); ga('send', 'event', 'Errors', 'BootstrapLoad'); })();</script>
-    <script>!function ($) { $(function(){ $('#myCarousel').carousel() }) }(window.jQuery);</script>
-    <script async>
-      $(window).load(function(){
+</script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<script>$('body').popover || (function(){ document.write('<script src="{{ static('js/bootstrap-3.0.2.min.js') }}">\x3C/script>'); ga('send', 'event', 'Errors', 'BootstrapLoad'); })();</script>
+<script>!function ($) { $(function(){ $('#myCarousel').carousel() }) }(window.jQuery);</script>
+<script async>
+    $(window).load(function(){
         var preload_imgs = ['{{ static('img/cs-wiki-1-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-2-CC-BY-SA.jpg') }}','{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}','{{ static('img/our-agents.jpg') }}'];
         $(preload_imgs).each(function() { var pimg = $('<img />').attr('src', this);});
-      });
-    </script>
-    <script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=3pz5mijc7zza6"></script>
-    <link rel="dns-prefetch" href="//vcms.virtuoso.com">
-  </body>
+    });
+</script>
+<script async="" defer="" src="//survey.g.doubleclick.net/async_survey?site=3pz5mijc7zza6"></script>
+<link rel="dns-prefetch" href="//vcms.virtuoso.com">
+</body>
 </html>
