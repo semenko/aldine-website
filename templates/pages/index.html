@@ -1,72 +1,80 @@
 {% extends "_base.html" %}
 {% block title %}A St. Louis Luxury Travel Agency{% endblock %}
 {% block description %}St. Louis luxury travel agents specializing in biking trips, adventure travel, cruises, and inventive land vacations. Family-owned since 1958.{% endblock %}
+
+{% block extra_footer_js %}
+(function(){
+var adtext = {'Jet':'Private Jet Tours', 'Butterfield':'Butterfield & Robinson Tours', 'Backroad':'Backroads Active Travel', 'Active':'Hiking and Biking Tours', 'Tauck':'Tauck Adventure Travel', 'MTSobek':'Mountain Travel Sobek','IST':'IST Cultural Tours','Japan':'Japan and Orient Tours','ATS':'ATS Tour Planning','Brendan':'Brendan Tour Planning','Island':'Island Travel Getaways','Travcoa':'Travcoa Tour Planning','Honeymoon':'Honeymoon Planning'};
+try { var anchor = location.hash.split(/\//)[1]; } catch (err) { var anchor = ""; }
+if (adtext.hasOwnProperty(anchor)) { $('.carousel-caption h1').first().text( adtext[anchor] ); $('#adtext h1').text("Experts at " + adtext[anchor]); $('#adtext').show(); } } )();
+{% endblock %}
+
 {% block page_core %}
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
+    <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1"></li>
         <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-  <div class="carousel-inner">
-    <div class="item active">
-        <!-- CC BY SA, Dmitry A. Mottl, http://commons.wikimedia.org/wiki/File:Annapurna_Massif_Panorama.jpg //-->
-      <img src="{{ static('img/cs-wiki-1-CC-BY-SA.jpg') }}" alt="">
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>Luxury Travel Planning</h1>
-          <p>We're family-owned and have been in business since 1958. Our agents have planned travel to all seven continents: Whether it's near or far, we can get you there.</p>
-          <p><a class="btn btn-lg btn-primary" href="/contact-us.html">Get in Touch</a></p>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <!-- CC BY SA, Dmitry A. Mottl, http://commons.wikimedia.org/wiki/File:Annapurna_Massif_Panorama.jpg //-->
+            <img src="{{ static('img/cs-wiki-1-CC-BY-SA.jpg') }}" alt="">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Luxury Travel Planning</h1>
+                    <p>We're family-owned and have been in business since 1958. Our agents have planned travel to all seven continents: Whether it's near or far, we can get you there.</p>
+                    <p><a class="btn btn-lg btn-primary" href="/contact-us.html">Get in Touch</a></p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <div class="item">
-        <!-- CC BY SA, Rafael Brix (SehLax), http://commons.wikimedia.org/wiki/File:Ruppberg_Sonnenaufgang.jpg //-->
-      <img src="{{ static('img/cs-wiki-2-CC-BY-SA.jpg') }}" alt="">
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>Elegant Vacations</h1>
-          <p>Your vacation should be stress-free. Let us plan your dreams with our experienced agents, and see why our clients call us "the best travel agency in St. Louis."</p>
-          <p><a class="btn btn-lg btn-primary" href="/contact-us.html">Call Us Today</a></p>
+        <div class="item">
+            <!-- CC BY SA, Rafael Brix (SehLax), http://commons.wikimedia.org/wiki/File:Ruppberg_Sonnenaufgang.jpg //-->
+            <img src="{{ static('img/cs-wiki-2-CC-BY-SA.jpg') }}" alt="">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Elegant Vacations</h1>
+                    <p>Your vacation should be stress-free. Let us plan your dreams with our experienced agents, and see why our clients call us "the best travel agency in St. Louis."</p>
+                    <p><a class="btn btn-lg btn-primary" href="/contact-us.html">Call Us Today</a></p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-      <!-- CC BY SA, Ritchyblack - Benh LIEU SONG, http://commons.wikimedia.org/wiki/File:Gorges_du_Tarn_Point_Sublime.jpg //-->
-    <div class="item">
-      <img src="{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}" alt="">
-      <div class="container">
-        <div class="carousel-caption">
-          <h1>Travel Without Hassle</h1>
-          <p>With our exquisite attention to detail, we'll make sure your next trip is hassle-free. Our experienced travel agents know the "ins and outs" of every destination.</p>
-          <p><a class="btn btn-lg btn-primary" href="/contact-us.html">Contact an Agent</a></p>
+        <!-- CC BY SA, Ritchyblack - Benh LIEU SONG, http://commons.wikimedia.org/wiki/File:Gorges_du_Tarn_Point_Sublime.jpg //-->
+        <div class="item">
+            <img src="{{ static('img/cs-wiki-3-CC-BY-SA.jpg') }}" alt="">
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>Travel Without Hassle</h1>
+                    <p>With our exquisite attention to detail, we'll make sure your next trip is hassle-free. Our experienced travel agents know the "ins and outs" of every destination.</p>
+                    <p><a class="btn btn-lg btn-primary" href="/contact-us.html">Contact an Agent</a></p>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
 </div>
 <div id="adtext" style="text-align: center;display:none;"><h1></h1><br><br></div>
 <div class="container marketing">
-  <div class="row">
-    <div class="col-lg-4">
-      <!-- <img class="img-circle" src="http://placehold.it/140x140"> //-->
-      <h2>Expert Agents</h2>
-      <p>Our Virtuoso-certified travel agents know the "ins and outs" of every destination, from visa and customs requirements, to the best local cuisine.</p>
-      <p><a class="btn btn-info" href="/about-us.html">Meet our Agents &raquo;</a></p>
+    <div class="row">
+        <div class="col-lg-4">
+            <!-- <img class="img-circle" src="http://placehold.it/140x140"> //-->
+            <h2>Expert Agents</h2>
+            <p>Our Virtuoso-certified travel agents know the "ins and outs" of every destination, from visa and customs requirements, to the best local cuisine.</p>
+            <p><a class="btn btn-info" href="/about-us.html">Meet our Agents &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <!-- <img class="img-circle" src="http://placehold.it/140x140"> //-->
+            <h2>Amazing Journeys</h2>
+            <p>From hiking Machu Picchu in Peru, to snorkeling atop the Great Barrier Reef &mdash; come see why our clients say we're "the best travel agents in St. Louis."</p>
+            <p><a class="btn btn-info" href="/featured-trips.html">See Featured Trips &amp; Cruises &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+            <!-- <img class="img-circle" src="http://placehold.it/140x140"> //-->
+            <h2>Always Connected</h2>
+            <p>We follow your travel reservations and can rebook you if flights get canceled. Plus, we're always reachable via our toll-free 24/7 emergency number.</p>
+            <p><a class="btn btn-info" href="/contact-us.html">Connect with Aldine Travel &raquo;</a></p>
+        </div>
     </div>
-    <div class="col-lg-4">
-        <!-- <img class="img-circle" src="http://placehold.it/140x140"> //-->
-      <h2>Amazing Journeys</h2>
-      <p>From hiking Machu Picchu in Peru, to snorkeling atop the Great Barrier Reef &mdash; come see why our clients say we're "the best travel agents in St. Louis."</p>
-      <p><a class="btn btn-info" href="/featured-trips.html">See Featured Trips &amp; Cruises &raquo;</a></p>
-    </div>
-    <div class="col-lg-4">
-        <!-- <img class="img-circle" src="http://placehold.it/140x140"> //-->
-      <h2>Always Connected</h2>
-      <p>We follow your travel reservations and can rebook you if flights get canceled. Plus, we're always reachable via our toll-free 24/7 emergency number.</p>
-      <p><a class="btn btn-info" href="/contact-us.html">Connect with Aldine Travel &raquo;</a></p>
-    </div>
-  </div>
 </div>
 {% endblock %}

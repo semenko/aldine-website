@@ -80,10 +80,7 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || (function(){ document.write('<script src="{{ static('js/jquery-1.10.2.min.js') }}">\x3C/script>'); ga('send', 'event', 'Errors', 'jQueryLoad'); })();</script>
 <script>
-    (function(){
-        var adtext = {'Jet':'Private Jet Tours', 'Butterfield':'Butterfield & Robinson Tours', 'Backroad':'Backroads Active Travel', 'Active':'Hiking and Biking Tours', 'Tauck':'Tauck Adventure Travel', 'MTSobek':'Mountain Travel Sobek','IST':'IST Cultural Tours','Japan':'Japan and Orient Tours','ATS':'ATS Tour Planning','Brendan':'Brendan Tour Planning','Island':'Island Travel Getaways','Travcoa':'Travcoa Tour Planning','Honeymoon':'Honeymoon Planning'};
-        try { var anchor = location.hash.split(/\//)[1]; } catch (err) { var anchor = ""; }
-        if (adtext.hasOwnProperty(anchor)) { $('.carousel-caption h1').first().text( adtext[anchor] ); $('#adtext h1').text("Experts at " + adtext[anchor]); $('#adtext').show(); } } )();
+    {% block extra_footer_js %}{% endblock %}
     (function() {
         try { var page = location.href.split(/\//)[3].split(/#/)[0]; } catch (err) { var page = '/'; } if(page.indexOf('.') == -1) { page += '/'; }
         $(".navbar ul.nav").find('a[href$="'+page+'"]').first().parents("li").addClass("active"); })();
