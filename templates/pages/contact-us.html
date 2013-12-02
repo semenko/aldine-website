@@ -1,6 +1,11 @@
 {% extends "_base.html" %}
 {% block title %}Contact Us{% endblock %}
 {% block description %}Send us an e-mail, give us a call, or swing by our office. We're family owned and have been in business since 1958.{% endblock %}
+{% block extra_footer_js %}
+$(window).load(function(){
+(window.frames || document.frames)["map"].window.location = "//maps.google.com/maps?f=q&source=s_q&hl=en&geocode=&q=Aldine+Travel&aq=&sll=38.6531,-90.243462&sspn=0.444531,0.891266&t=h&ie=UTF8&hq=Aldine+Travel&hnear=&ll=38.639668,-90.396709&spn=0.040225,0.051498&z=13&output=embed";
+});
+{% endblock %}
 {% block page_core %}
 <div class="bgimg i1"></div>
 <div class="container padded">
@@ -16,10 +21,10 @@
                     <input id="name" name="entry.0.single" type="text" placeholder="Your Name" class="form-control" autocomplete="name" required><br>
 
                     <label for="email">Email</label>
-                    <input id="email" name="entry.1.single" type="text" placeholder="your@email.address" class="form-control" autocomplete="email" required><br><br>
+                    <input id="email" name="entry.1.single" type="text" placeholder="your@email.com" class="form-control" autocomplete="email" required><br><br>
 
                     <label for="message">Message</label><br>
-                    <textarea class="form-control" id="message" name="entry.3.single" rows="5" placeholder="Enter a short message." required></textarea>
+                    <textarea class="form-control" id="message" name="entry.3.single" rows="5" placeholder="Please enter a short message." required></textarea>
                     <br>
                     <button type="submit" class="btn btn-info" value="Send Now">Send Now</button>
                 </form>
@@ -37,7 +42,8 @@
             </address>
         </div>
         <div class="col-md-4">
-            <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="//maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Aldine+Travel&amp;aq=&amp;sll=38.6531,-90.243462&amp;sspn=0.444531,0.891266&amp;t=m&amp;ie=UTF8&amp;hq=Aldine+Travel&amp;hnear=&amp;ll=38.639668,-90.396709&amp;spn=0.040225,0.051498&amp;z=13&amp;output=embed"></iframe><br><small><a href="//maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Aldine+Travel&amp;aq=&amp;sll=38.6531,-90.243462&amp;sspn=0.444531,0.891266&amp;t=m&amp;ie=UTF8&amp;hq=Aldine+Travel&amp;hnear=&amp;ll=38.639668,-90.396709&amp;spn=0.040225,0.051498&amp;z=13" style="color:#0000FF;text-align:left" target="_blank" onmousedown="ga('send','event','MapClick','ContactUs');">View Larger Map</a></small>
+            <iframe width="300" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" name="map"></iframe>
+            <br><small><a href="//maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Aldine+Travel&amp;aq=&amp;sll=38.6531,-90.243462&amp;sspn=0.444531,0.891266&amp;t=m&amp;ie=UTF8&amp;hq=Aldine+Travel&amp;hnear=&amp;ll=38.639668,-90.396709&amp;spn=0.040225,0.051498&amp;z=13" style="color:#0000FF;text-align:left" target="_blank" onmousedown="ga('send','event','MapClick','ContactUs');">View Larger Map</a></small>
         </div>
         <!-- Google Code for Lead Conversion Page -->
         <script type="text/javascript">
