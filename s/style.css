@@ -12,6 +12,26 @@ body > .container {
     background-color: rgba(255, 255, 255, 0.7);
 }
 
+.bgimg {
+    z-index: -999;
+    position:absolute; width: 100%; height:100%;
+    opacity:0.60; filter:alpha(opacity=60);
+    background-size: cover;
+    background-position: center center;
+}
+
+.i1 {
+    background-image: url('//d1tse6dhitxps4.cloudfront.net/s/img/cs-wiki-1-CC-BY-SA.jpg');
+}
+
+.i2 {
+    background-image: url('//d1tse6dhitxps4.cloudfront.net/s/img/cs-wiki-2-CC-BY-SA.jpg');
+}
+
+.i3 {
+    background-image: url('//d1tse6dhitxps4.cloudfront.net/s/img/cs-wiki-3-CC-BY-SA.jpg');
+}
+
 .padded {
     padding-top: 70px;
 }

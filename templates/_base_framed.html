@@ -1,23 +1,6 @@
 {% extends "_base.html" %}
 {% block page_core %}
-<style type="text/css">
-#backgroundimg {
-    background-image: url('{{ static('img/cs-wiki-2-CC-BY-SA.jpg') }}');
-    background-size: 100% 550px; background-repeat:no-repeat;
-    z-index: -999; display:inline;
-    position:absolute; width: 100%; height:100%;
-    opacity:0.5; filter:alpha(opacity=20)}
-</style>
-<div id="backgroundimg"></div>
-<style type="text/css">
-#backgroundimg2 {
-    background-image: url('{{ static('img/cs-wiki-1-CC-BY-SA.jpg') }}');
-    background-size: 100% 550px; background-repeat:no-repeat;
-    z-index: -999; display:inline;
-    position:absolute; top:550px; width: 100%; height:100%;
-    opacity:0.5; filter:alpha(opacity=20)}
-</style>
-<div id="backgroundimg2"></div>
+<div class="bgimg i3"></div>
 <div class="container padded">
     <div>
         <div style="position:absolute;padding-top:50px;z-index:-100" id="loading"><h1>Loading <span id="wait"></span></h1></div>
