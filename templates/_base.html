@@ -9,8 +9,7 @@
     <meta name="author" content="Nick Semenkovich (@semenko) http://nick.semenkovich.com/">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ static('style.css') }}" rel="stylesheet">
+    <link href="{{ static('bs-3.0.3-custom.css') }}" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.min.js"></script>
     <![endif]-->
@@ -85,8 +84,7 @@
         try { var page = location.href.split(/\//)[3].split(/#/)[0]; } catch (err) { var page = '/'; } if(page.indexOf('.') == -1) { page += '/'; }
         $(".navbar ul.nav").find('a[href$="'+page+'"]').first().parents("li").addClass("active"); })();
 </script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-<script>$('body').popover || (function(){ document.write('<script src="{{ static('js/bootstrap-3.0.2.min.js') }}">\x3C/script>'); ga('send', 'event', 'Errors', 'BootstrapLoad'); })();</script>
+<script src="{{ static('js/bootstrap-3.0.3-custom.min.js') }}"></script>
 <script>!function ($) { $(function(){ $('#myCarousel').carousel() }) }(window.jQuery);</script>
 <script async>
     $(window).load(function(){
