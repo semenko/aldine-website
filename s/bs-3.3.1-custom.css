@@ -20,7 +20,7 @@ body {
 }
 
 body > .container {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.75);
 }
 
 .bgimg {
@@ -32,15 +32,15 @@ body > .container {
 }
 
 .i1 {
-    background-image: url('//d1tse6dhitxps4.cloudfront.net/s/img/cs-wiki-1-CC-BY-SA.jpg');
+    background-image: url('/s/img/cs-wiki-1-CC-BY-SA.jpg');
 }
 
 .i2 {
-    background-image: url('//d1tse6dhitxps4.cloudfront.net/s/img/cs-wiki-2-CC-BY-SA.jpg');
+    background-image: url('/s/img/cs-wiki-2-CC-BY-SA.jpg');
 }
 
 .i3 {
-    background-image: url('//d1tse6dhitxps4.cloudfront.net/s/img/cs-wiki-3-CC-BY-SA.jpg');
+    background-image: url('/s/img/cs-wiki-3-CC-BY-SA.jpg');
 }
 
 .padded {
@@ -52,7 +52,7 @@ hr {
 }
 
 footer {
-    color: #585858;
+    color: #555;
 }
 
 /* CUSTOMIZE THE NAVBAR
