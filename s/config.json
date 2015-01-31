@@ -375,12 +375,31 @@
     "@dl-horizontal-offset": "@component-offset-horizontal",
     "@hr-border": "@gray-lighter"
   },
-  "css": [],
+  "css": [
+    "type.less",
+    "grid.less",
+    "forms.less",
+    "buttons.less",
+    "responsive-utilities.less",
+    "button-groups.less",
+    "input-groups.less",
+    "navs.less",
+    "navbar.less",
+    "jumbotron.less",
+    "thumbnails.less",
+    "media.less",
+    "panels.less",
+    "responsive-embed.less",
+    "wells.less",
+    "component-animations.less",
+    "dropdowns.less",
+    "carousel.less"
+  ],
   "js": [
     "carousel.js",
     "dropdown.js",
     "collapse.js",
     "transition.js"
   ],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=ef9024b1a39019385c45"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=eb6cd442290d1d8967dd"
 }
