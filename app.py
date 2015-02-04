@@ -84,9 +84,9 @@ def page_contact_us():
 
 
 # Embedded bookshelf from fliphtml5
-@app.route("/Luxury-Travel-Brochures")
+@app.route("/Luxury-Travel-Brochures.html")
 def page_katy_trust():
-    return render_template('pages/brochures.html')
+    return render_template('pages/Luxury-Travel-Brochures.html')
 
 
 
