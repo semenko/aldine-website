@@ -54,21 +54,9 @@ def page_about():
 def page_featured_trips():
     return render_template('pages/featured-trips.html')
 
-@app.route("/cruises.html")
-def page_cruises():
-    return render_template('pages/cruises.html')
-
-@app.route("/tours.html")
-def page_tours():
-    return render_template('pages/tours.html')
-
 @app.route("/vacation-packages.html")
 def page_vacation_packages():
     return render_template('pages/vacation-packages.html')
-
-@app.route("/hotels-and-resorts.html")
-def page_hotels_and_resorts():
-    return render_template('pages/hotels-and-resorts.html')
 
 @app.route("/promotions.html")
 def page_promotions():
