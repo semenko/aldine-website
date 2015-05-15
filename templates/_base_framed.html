@@ -9,7 +9,7 @@
             var dots = window.setInterval( function() { if ( wait.innerHTML.length > 2) wait.innerHTML = ""; else wait.innerHTML += "."; }, 600);
             function destroyLoading() { clearInterval(dots); document.getElementById('loading').style.display = 'none'; };
         </script>
-        <iframe src="{% block iframe %}{% endblock %}" frameborder="0" height="850" width="100%" onload="destroyLoading();"></iframe>
+        <iframe src="{% block iframe %}{% endblock %}" frameborder="0" height="850" width="100%" onload="destroyLoading();" sandbox="allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
     </div>
 </div>
 {% endblock %}
